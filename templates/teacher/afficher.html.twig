@@ -1,0 +1,51 @@
+
+
+<h1>Bonjour {{name | upper}}</h1>
+<h1> Class : {{class}}</h1>
+<h1>{{1+2}}</h1>
+{% set pi = 3.14 %}
+{{pi}}
+{# formations #}
+<br>
+Le nombre total de formations est {{ name | length }}
+ <h1>{{heure | date('d/m/Y')}}</h1>
+{#
+<hr><br>
+{% set maxP = 0 %}
+{% for f in formations %}
+    {% set maxP = max(f.nb_participants, maxP) %}
+{% endfor %}
+
+<table border=1>
+    <tr>
+        <th> ref </th>
+        <th> Titre </th>
+        <th> Description </th>
+        <th> date_debut </th>
+        <th> date_fin </th>
+        <th> nb_participants </th>
+        <th> </th>
+    </tr>
+{% for formation in formations %}
+
+     {% if 'theorique' in formation.Description %} 
+    
+        <tr>
+            <td> {{ formation.ref }} </td>
+            <td> {{ formation.Titre | upper }} </td>
+            <td> {{ formation.Description }} </td>
+            <td> {{ formation.date_debut }} </td>
+            <td> {{ formation.date_fin }} </td>
+            <td> {{ formation.nb_participants }} </td>
+            
+            <td> 
+                {% if formation.nb_participants == 0 %}
+                    <a href="{{ path('detail', {'ref': formation.ref}) }}"> Participer </a>  
+                {% endif %}
+            </td>
+        </tr>
+    
+
+{% endfor %}
+
+</table> #}

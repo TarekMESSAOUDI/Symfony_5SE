@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\bin",
+    "\\src",
+    "\\src\\Controller",
+    "\\src\\Entity",
+    "\\src\\Form",
+    "\\src\\Repository",
+    "\\templates",
+    "\\templates\\club"
+  ],
+  "SelectedNode": "\\src\\Entity\\Classroom.php",
+  "PreviewInSolutionExplorer": false
+}

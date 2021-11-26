@@ -1,0 +1,23 @@
+<table border=1>
+	<tr>
+		<th>Id</th>
+		<th>Nom</th>
+		<th>Action</th>
+		<th>Details</th>
+	<tr>
+{% for cr in classrooms%}
+	<tr>
+		<td> {{ cr.id}} </td>
+		<td> {{ cr.name}} </td>
+		<td> 
+			<a href="{{ path('supprimerCr', {'id': cr.id})}}">Supprimer</a>
+		</td>
+		<td>
+			<a href="{{ path('showCr', {'id': cr.id})}}">Details</a>
+		</td>
+	</tr>
+{% endfor %}
+
+
+
+</table>

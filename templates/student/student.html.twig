@@ -1,0 +1,25 @@
+{{form(form)}}
+<table border=1>
+    <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Classrom</th>
+    <tr>
+        {% for c in students%}
+    <tr>
+        <td> {{ c.id}} </td>
+        <td> {{ c.email}} </td>
+        <td>{{c.classroom.name}}</td>
+        <td>
+          <!--  <a href="{{ path('supprimerC', {'id': c.id})}}">Supprimer</a>-->
+        </td>
+        <td>
+            <!--  <a href="{{ path('showC', {'id': c.id})}}">Details</a>-->
+        </td>
+        <td>
+        <!--    <a href="{{path('updateC',{'id':c.id})}}">Modifier</a>-->
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
